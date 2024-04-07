@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+    id 'org.checkerframework' version '0.6.37'
+}
+
+apply plugin: 'org.checkerframework'
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+checkerFramework {
+    checkers = [
+            'org.checkerframework.checker.units.UnitsChecker'
+    ]
+    excludeTests = true
+    incrementalize = false
+}
+
+
+dependencies {
+  compileOnly 'org.checkerframework:checker-qual:3.1.0'
+  checkerFramework 'org.checkerframework:checker:3.1.0'
+}

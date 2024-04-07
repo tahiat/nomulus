@@ -1,0 +1,6 @@
+InvoicingPipeline.java:78: error: [argument.type.incompatible] incompatible types in argument.
+              .via(BillingEvent::getInvoiceGroupingKey));
+                  ^
+  found   : @UnknownUnits MapElements</*INFERENCE FAILED for:*/ ? extends @UnknownUnits Object, /*INFERENCE FAILED for:*/ ? extends @UnknownUnits Object>
+  required: @UnknownUnits PTransform<? extends @UnknownUnits PInput super @UnitsBottom PCollection<@UnknownUnits BillingEvent>, /*INFERENCE FAILED for:*/ @UnknownUnits ? extends @UnknownUnits POutput>
+1 error
